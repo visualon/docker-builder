@@ -1,10 +1,8 @@
 FROM ghcr.io/visualon/buildpack:latest@sha256:914190d13124fc8d51bbb83df368774bf78664d3b217038679035091c72f4673
 
-LABEL maintainer="Michael Kriese <michael.kriese@visualon.de>" \
-  org.opencontainers.image.authors="Michael Kriese <michael.kriese@visualon.de>" \
-  org.opencontainers.image.licenses="MIT" \
-  org.opencontainers.image.source="https://github.com/visualon/docker-images" \
-  org.opencontainers.image.url="https://github.com/visualon/docker-images"
+LABEL \
+  org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
+  org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
 
 # renovate: datasource=docker versioning=docker
