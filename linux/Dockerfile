@@ -6,7 +6,7 @@ LABEL \
 
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 20.10.5
+RUN install-tool docker 20.10.6
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.1.3
