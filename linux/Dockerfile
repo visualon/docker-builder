@@ -4,6 +4,7 @@ LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
+RUN install-apt mono-devel
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool docker 20.10.6
