@@ -7,7 +7,7 @@ LABEL \
 RUN install-apt mono-devel
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 20.10.6
+RUN install-tool docker 20.10.7
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.1.3
