@@ -6,6 +6,9 @@ LABEL \
 
 RUN install-apt mono-devel
 
+# Required for nuget client
+RUN mkdir -p /root/.config/NuGet
+
 # renovate: datasource=docker versioning=docker
 RUN install-tool docker 20.10.7
 
