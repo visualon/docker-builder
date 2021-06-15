@@ -19,7 +19,7 @@ RUN install-tool powershell v7.1.3
 RUN install-tool dotnet 5.0.301
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool node 14.17.0
+RUN install-tool node 14.17.1
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.10
