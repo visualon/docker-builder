@@ -1,7 +1,7 @@
 # escape=`
 
 # Use the latest Windows Server Core image with .NET Framework 4.7.2.
-FROM ghcr.io/visualon/buildpack:latest@sha256:eb445170ac702d83d210ceecb86e56d541e7553391bc309df556aacaace2961f
+FROM ghcr.io/visualon/buildpack:latest@sha256:509ce8647666713d1cbe0946e8b3bbbe3d6efc0ddb49261f61308f48a576e1ee
 
 LABEL `
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" `
