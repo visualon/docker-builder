@@ -11,7 +11,7 @@ LABEL `
 RUN install-tool pwsh 7.1.3
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
-RUN install-tool node 14.17.3
+RUN install-tool node 14.17.4
 
 # renovate: datasource=npm
 RUN install-npm yarn 1.22.11
