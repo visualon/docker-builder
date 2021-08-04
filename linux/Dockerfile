@@ -14,7 +14,7 @@ RUN set -ex; \
   
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 20.10.7
+RUN install-tool docker 20.10.8
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.1.3
