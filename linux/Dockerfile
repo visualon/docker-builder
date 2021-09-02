@@ -22,7 +22,7 @@ RUN install-tool powershell v7.1.4
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
 RUN install-tool dotnet 5.0.400
 
-# renovate: datasource=docker versioning=docker
+# renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 14.17.6
 
 # renovate: datasource=npm versioning=npm
