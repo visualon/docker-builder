@@ -11,12 +11,6 @@
   },
   "packageRules": [
     {
-      "packageNames": ["git"],
-      "matchPaths": ["windows/**"],
-      "versioning": "loose",
-      "allowedVersions": "/^v\\d+\\.\\d+\\.\\d+\\.windows\\.\\d+$/"
-    },
-    {
       "packageNames": ["kubernetes-sigs/kustomize"],
       "extractVersion": "^kustomize\\/v(?<version>\\d+\\.\\d+\\.\\d+)$"
     },

@@ -3,3 +3,5 @@ services:
   sut:
     image: "${IMAGE}"
     command: msbuild -version
+    stdin_open: false
+    tty: false
