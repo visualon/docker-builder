@@ -4,7 +4,7 @@ LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
-# renovate: datasource=docker versioning=docker
+# renovate: datasource=github-releases lookupName=moby/moby
 RUN install-tool docker 20.10.8
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
