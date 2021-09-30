@@ -17,7 +17,7 @@ RUN install-tool dotnet 5.0.401
 RUN install-tool node 14.17.6
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool yarn 1.22.11
+RUN install-tool yarn 1.22.15
 
 # renovate: datasource=github-releases lookupName=docker/compose
 RUN install-tool docker-compose 1.29.2
