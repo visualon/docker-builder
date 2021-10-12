@@ -14,7 +14,7 @@ RUN install-tool powershell v7.1.4
 RUN install-tool dotnet 5.0.401
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
-RUN install-tool node 14.18.0
+RUN install-tool node 14.18.1
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.15
