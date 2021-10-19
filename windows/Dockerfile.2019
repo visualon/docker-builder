@@ -14,7 +14,7 @@ RUN install-tool pwsh v7.1.5
 RUN install-tool node 14.18.1
 
 # renovate: datasource=npm
-RUN install-npm yarn 1.22.15
+RUN install-npm yarn 1.22.17
 
 # renovate: datasource=adoptium-java lookupName=java-jre
 RUN install-tool java 11.0.12+7
