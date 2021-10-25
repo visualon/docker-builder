@@ -5,7 +5,7 @@ LABEL \
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
 # renovate: datasource=github-releases lookupName=moby/moby
-RUN install-tool docker v20.10.9
+RUN install-tool docker v20.10.10
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.1.5
