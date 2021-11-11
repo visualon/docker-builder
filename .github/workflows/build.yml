@@ -8,6 +8,7 @@ env:
   FILE: builder
   IMAGE: ghcr.io/${{ github.repository_owner }}/builder
   NODE_VERSION: v16.13.0 # renovate: datasource=node depName=node
+  DRY_RUN: ${{ github.ref != 'refs/heads/main' }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
@@ -15,7 +16,7 @@ concurrency:
 
 jobs:
   windows:
-    runs-on: windows-${{ matrix.os }}
+    runs-on: ${{ format('windows-{0}', matrix.os) }}
 
     timeout-minutes: 60
 
