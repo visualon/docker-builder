@@ -8,7 +8,7 @@ LABEL `
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
-RUN install-tool powershell v7.1.5
+RUN install-tool powershell v7.2.0
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 14.18.1
