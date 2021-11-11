@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "visualon/renovate-config",
-    "visualon/renovate-config:automergePatch",
-    ":automergeMinor"
-  ],
+  "extends": ["visualon/renovate-config", "visualon/renovate-config:automergePatch", ":automergeMinor"],
   "labels": ["deps"],
   "digest": {
     "extends": ["schedule:daily"]
@@ -15,10 +11,21 @@
       "extractVersion": "^kustomize\\/v(?<version>\\d+\\.\\d+\\.\\d+)$"
     },
     {
-      "description": "Reset node to docker versioning",
-      "matchPackageNames": ["node"],
-      "matchDatasources": ["docker"],
-      "versioning": "docker"
+      "description": "Trigger fix release for deps updates",
+      "matchPaths": ["**/Dockerfile", "**/Dockerfile.*"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Trigger feat release for deps major updates",
+      "matchPaths": ["**/Dockerfile", "**/Dockerfile.*"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat"
+    },
+    {
+      "description": "Use `test` semantic commit scope for tests",
+      "matchPaths": ["**/test/**"],
+      "semanticCommitType": "test"
     }
   ]
 }
