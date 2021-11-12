@@ -5,6 +5,7 @@
   "digest": {
     "extends": ["schedule:daily"]
   },
+  "automergeType": "pr",
   "packageRules": [
     {
       "packageNames": ["kubernetes-sigs/kustomize"],
