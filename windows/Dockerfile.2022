@@ -17,7 +17,7 @@ RUN install-tool node 14.18.3
 RUN install-npm yarn 1.22.17
 
 # renovate: datasource=adoptium-java lookupName=java-jre
-RUN install-tool java 11.0.13+8
+RUN install-tool java 11.0.14+9
 
 # install last to get latest vs updates
 RUN install-tool vs-tools
