@@ -17,7 +17,7 @@ RUN install-tool dotnet 3.1.416
 RUN install-tool dotnet 5.0.405
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
-RUN install-tool dotnet 6.0.102
+RUN install-tool dotnet 6.0.200
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 14.19.0
