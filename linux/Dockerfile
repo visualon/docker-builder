@@ -20,7 +20,7 @@ RUN install-tool dotnet 5.0.406
 RUN install-tool dotnet 6.0.201
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
-RUN install-tool node 14.19.0
+RUN install-tool node 14.19.1
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.17
