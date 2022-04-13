@@ -14,7 +14,7 @@ RUN install-tool powershell v7.2.2
 RUN install-tool dotnet 3.1.418
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
-RUN install-tool dotnet 5.0.406
+RUN install-tool dotnet 5.0.407
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
 RUN install-tool dotnet 6.0.201
