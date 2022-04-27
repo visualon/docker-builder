@@ -11,7 +11,7 @@ LABEL `
 RUN install-tool powershell v7.2.2
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
-RUN install-tool node 14.19.1
+RUN install-tool node 16.14.2
 
 # renovate: datasource=npm
 RUN install-npm yarn 1.22.18
