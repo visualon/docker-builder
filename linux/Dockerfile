@@ -8,7 +8,7 @@ LABEL \
 RUN install-tool docker v20.10.14
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
-RUN install-tool powershell v7.2.2
+RUN install-tool powershell v7.2.3
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
 RUN install-tool dotnet 3.1.418
