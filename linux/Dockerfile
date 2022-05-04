@@ -22,8 +22,8 @@ RUN install-tool dotnet 6.0.202
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 16.15.0
 
-# renovate: datasource=npm versioning=npm
-RUN install-tool yarn 1.22.18
+# renovate: datasource=npm
+RUN install-tool corepack 0.10.0
 
 # renovate: datasource=github-releases lookupName=docker/compose
 RUN install-tool docker-compose 1.29.2
