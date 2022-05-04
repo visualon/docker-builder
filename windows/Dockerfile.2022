@@ -13,8 +13,7 @@ RUN install-tool powershell v7.2.3
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 16.15.0
 
-# renovate: datasource=npm
-RUN install-npm yarn 1.22.18
+RUN set -ex; corepack -v; corepack enable; yarn -v
 
 # renovate: datasource=adoptium-java lookupName=java-jre
 RUN install-tool java 11.0.15+10
