@@ -126,7 +126,7 @@ jobs:
           cache: yarn
 
       - name: Installing dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       # - name: docker-config
       #   uses: renovatebot/internal-tools@ba8cd25dca8f977f71143adcab39b0fa06705398 # renovate: tag=v1.9.2
@@ -161,7 +161,7 @@ jobs:
           cache: yarn
 
       - name: Installing dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Log into registry
         if: github.ref == 'refs/heads/main'
