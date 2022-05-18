@@ -10,7 +10,9 @@ LABEL `
 
 COPY src\ c:\
 
+# required for jenkins
 RUN prepare-user 'jenkins-slave$'
+RUN git config --system safe.directory "*"
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.2.4
