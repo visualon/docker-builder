@@ -45,3 +45,8 @@ RUN install-tool skopeo v1.8.0
 
 # renovate: datasource=adoptium-java lookupName=java-jre
 RUN install-tool java 11.0.15+10
+
+RUN install-apt zstd
+
+# renovate: datasource=github-releases lookupName=minio/mc
+RUN install-tool minio-client RELEASE.2022-05-09T04-08-26Z
