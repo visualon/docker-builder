@@ -27,6 +27,11 @@
       "description": "Use `test` semantic commit scope for tests",
       "matchPaths": ["**/test/**"],
       "semanticCommitType": "test"
+    },
+    {
+      "description": "Minio loose versioning",
+      "matchPackageNames": ["minio-client"],
+      "versioning": "loose"
     }
   ]
 }
