@@ -4,6 +4,9 @@ LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+ENV DOTNET_CLI_UI_LANGUAGE=en-us
+
 # renovate: datasource=github-releases lookupName=moby/moby
 RUN install-tool docker v20.10.17
 
