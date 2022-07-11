@@ -4,6 +4,10 @@ LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
   org.opencontainers.image.url="https://github.com/visualon/docker-builder"
 
+# .NET SDK MSBuild requires US.UTF-8 locale to execute tasks
+# https://github.com/dotnet/msbuild/issues/4194
+RUN set -ex; install-apt locales; locale-gen en_US.UTF-8
+
 ENV DOTNET_CLI_UI_LANGUAGE=en-us
 
 # renovate: datasource=github-releases lookupName=moby/moby
