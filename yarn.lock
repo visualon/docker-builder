@@ -1416,6 +1416,7 @@ __metadata:
     lint-staged: 13.0.3
     npm-run-all: 4.1.5
     prettier: 2.7.1
+    prettier-plugin-package: 1.3.0
     semantic-release: 19.0.3
     shelljs: 0.8.5
     typescript: 4.7.4
@@ -3863,6 +3864,15 @@ __metadata:
     find-up: ^2.0.0
     load-json-file: ^4.0.0
   checksum: b50775157262abd1bfb4d3d948f3fc6c009d10266c6507d4de296af4e2cbb6d2738310784432185886d83144466fbb286b6e8ff0bc23dc5ee7d81810dc6c4788
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-package@npm:1.3.0":
+  version: 1.3.0
+  resolution: "prettier-plugin-package@npm:1.3.0"
+  peerDependencies:
+    prettier: ^2.0.0
+  checksum: 830c105865ab3bde0cdfdce28d410cd8391ee4725e07e90f7570f43f6a3f30a5568b5b7391338b04dd512a4a6ded1670a1dd806cfc141264e79b3444fa629057
   languageName: node
   linkType: hard
 
