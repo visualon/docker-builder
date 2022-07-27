@@ -15,8 +15,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+
+      - name: Set up Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3.4.1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
+
+      - name: enable corepack
+        run: corepack enable
+
+      - name: Installing dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+
   windows:
     runs-on: ${{ format('windows-{0}', matrix.os) }}
+    needs: [lint]
 
     timeout-minutes: 60
 
@@ -70,6 +94,7 @@ jobs:
 
   linux:
     runs-on: ubuntu-latest
+    needs: [lint]
 
     timeout-minutes: 30
 
