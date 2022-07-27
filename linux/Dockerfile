@@ -46,7 +46,7 @@ RUN install-tool buildx v0.8.2
 # renovate: datasource=github-releases lookupName=kubernetes-sigs/kustomize
 RUN install-tool kustomize 4.0.4
 
-# renovate: datasource=github-releases lookupName=containers/skopeo
+# renovate: datasource=github-releases lookupName=visualon/skopeo-prebuild
 RUN install-tool skopeo v1.9.0
 
 # renovate: datasource=adoptium-java lookupName=java-jre
