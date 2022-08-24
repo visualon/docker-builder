@@ -572,10 +572,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.52":
-  version: 16.11.52
-  resolution: "@types/node@npm:16.11.52"
-  checksum: eb688bff28015f1399264b7aa347d5f40e165d438306bd5884d78993671c5e43b7849b8ddc74b91bf7c7b73e15ba54fc56ea1db2118b0e3f59f9fabd2adc7fe7
+"@types/node@npm:16.11.55":
+  version: 16.11.55
+  resolution: "@types/node@npm:16.11.55"
+  checksum: fec4e9619ee231cb2623ca470a867d8758fc52f4bf6275f4b412378de590d933dcdb411eb75607a85ce85c2fdf0dc969ee4e044c167097d4556890917e8550ef
   languageName: node
   linkType: hard
 
@@ -1430,7 +1430,7 @@ __metadata:
   resolution: "docker-builder@workspace:."
   dependencies:
     "@semantic-release/exec": 6.0.3
-    "@types/node": 16.11.52
+    "@types/node": 16.11.55
     "@types/shelljs": 0.8.11
     commander: 9.4.0
     conventional-changelog-conventionalcommits: 5.0.0
