@@ -50,7 +50,7 @@ RUN install-tool kustomize 4.0.4
 RUN install-tool skopeo 1.10.0
 
 # renovate: datasource=adoptium-java lookupName=java-jre
-RUN install-tool java 11.0.16+8
+RUN install-tool java 11.0.17+8
 
 RUN install-apt zstd
 
