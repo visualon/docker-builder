@@ -32,7 +32,7 @@ RUN install-tool java 11.0.17+8
 RUN install-tool zstd 1.5.2
 
 # renovate: datasource=github-releases lookupName=minio/mc
-RUN install-tool minio-client RELEASE.2022-11-07T23-47-39Z
+RUN install-tool minio-client RELEASE.2022-11-17T21-20-39Z
 
 # install last to get latest vs updates
 RUN install-tool vs-tools
