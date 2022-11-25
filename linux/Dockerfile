@@ -16,13 +16,13 @@ RUN install-tool docker v20.10.21
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
 RUN install-tool powershell v7.2.7
 
-# renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
+# renovate: datasource=dotnet lookupName=dotnet-sdk
 RUN install-tool dotnet 3.1.425
 
-# renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
+# renovate: datasource=dotnet lookupName=dotnet-sdk
 RUN install-tool dotnet 6.0.403
 
-# renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk versioning=docker
+# renovate: datasource=dotnet lookupName=dotnet-sdk
 RUN install-tool dotnet 7.0.100
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
