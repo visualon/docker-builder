@@ -25,6 +25,18 @@
       "semanticCommitType": "feat"
     },
     {
+      "description": "Trigger fix release for node updates",
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "description": "Trigger feat release for node major updates",
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat"
+    },
+    {
       "description": "Use `test` semantic commit scope for tests",
       "matchPaths": ["**/test/**"],
       "semanticCommitType": "test"
