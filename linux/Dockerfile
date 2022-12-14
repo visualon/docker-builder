@@ -17,7 +17,7 @@ RUN install-tool docker v20.10.21
 RUN install-tool powershell v7.3.0
 
 # renovate: datasource=dotnet lookupName=dotnet-sdk
-RUN install-tool dotnet 3.1.425
+RUN install-tool dotnet 3.1.426
 
 # renovate: datasource=dotnet lookupName=dotnet-sdk
 RUN install-tool dotnet 6.0.403
