@@ -16,7 +16,7 @@ RUN prepare-user 'jenkins-slave$'
 RUN git config --system safe.directory "*"
 
 # renovate: datasource=github-releases lookupName=PowerShell/PowerShell
-RUN install-tool powershell v7.3.0
+RUN install-tool powershell v7.3.1
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 18.12.1
