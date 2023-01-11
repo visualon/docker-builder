@@ -23,7 +23,7 @@ RUN install-tool dotnet 3.1.426
 RUN install-tool dotnet 6.0.404
 
 # renovate: datasource=dotnet lookupName=dotnet-sdk
-RUN install-tool dotnet 7.0.101
+RUN install-tool dotnet 7.0.102
 
 # renovate: datasource=github-releases lookupName=nodejs/node versioning=node
 RUN install-tool node 18.13.0
