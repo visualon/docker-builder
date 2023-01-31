@@ -90,13 +90,6 @@ jobs:
         env:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
-      - name: Publish the Docker image tags
-        if: github.ref == 'refs/heads/main'
-        run: |
-          if [ -f push.sh ]; then
-            ./push.sh
-          fi
-
         shell: bash
         working-directory: ./windows
 
@@ -136,15 +129,7 @@ jobs:
 
       - name: Publish the Docker image
         if: github.ref == 'refs/heads/main'
-        run: docker buildx bake build
-
-      - name: Publish the Docker image tags
-        if: github.ref == 'refs/heads/main'
-        run: |
-          if [ -f push.sh ]; then
-            ./push.sh
-          fi
-        working-directory: ./linux
+        run: docker buildx bake build --provenance=false
 
   multi-arch:
     needs: [linux, windows]
