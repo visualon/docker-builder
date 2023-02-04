@@ -1,4 +1,4 @@
-FROM ghcr.io/visualon/buildpack:3.2.7@sha256:5ccefd80e248c9d5b2c416c08ca6cabec84f23a895f2bcc2e13369e7a465810e
+FROM ghcr.io/visualon/buildpack:3.2.8@sha256:5ccefd80e248c9d5b2c416c08ca6cabec84f23a895f2bcc2e13369e7a465810e
 
 LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
