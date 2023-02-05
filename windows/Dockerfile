@@ -19,7 +19,7 @@ RUN git config --system safe.directory "*"
 RUN install-tool powershell v7.3.2
 
 # renovate: datasource=github-releases packageName=nodejs/node versioning=node
-RUN install-tool node 18.13.0
+RUN install-tool node 18.14.0
 
 # renovate: datasource=npm
 RUN install-npm corepack 0.15.3
