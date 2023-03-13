@@ -29,7 +29,7 @@ RUN corepack -v && corepack enable && yarn -v
 RUN install-tool java 11.0.18+10
 
 # renovate: datasource=github-releases packageName=facebook/zstd
-RUN install-tool zstd 1.5.2
+RUN install-tool zstd v1.5.4
 
 # renovate: datasource=github-releases packageName=minio/mc
 RUN install-tool minio-client RELEASE.2022-12-24T15-21-38Z
