@@ -18,7 +18,7 @@ RUN git config --system safe.directory "*"
 # renovate: datasource=github-releases packageName=PowerShell/PowerShell
 RUN install-tool powershell v7.3.3
 
-# renovate: datasource=github-releases packageName=nodejs/node versioning=node
+# renovate: datasource=node
 RUN install-tool node 18.15.0
 
 # renovate: datasource=npm
