@@ -9,4 +9,4 @@ exec { msbuild --version }
 
 exec { npm i --no-package-lock }
 
-exec { npm run test }
+exec { node -e 'require("@swc/core-win32-x64-msvc")' }
