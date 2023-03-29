@@ -7,6 +7,6 @@ $DebugPreference = 'Continue'
 
 exec { msbuild --version }
 
-exec { npm ci }
+exec { npm i --no-package-lock }
 
 exec { npm run test }
