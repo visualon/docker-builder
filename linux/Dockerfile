@@ -1,4 +1,4 @@
-FROM ghcr.io/visualon/buildpack:3.3.3@sha256:abf6a6ad10eba6dd480467cb5cdc91768075a05bb3fb06df80b0202d3bc9ce7c
+FROM ghcr.io/visualon/buildpack:3.5.1@sha256:f20c7771aa022bdd87ea2135768b8fe50c062dec16d479519dcf9ec5a40db43c
 
 LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
@@ -11,7 +11,7 @@ RUN set -ex; install-apt locales; locale-gen en_US.UTF-8
 ENV DOTNET_CLI_UI_LANGUAGE=en-us
 
 # renovate: datasource=github-releases packageName=moby/moby
-RUN install-tool docker v20.10.23
+RUN install-tool docker v23.0.1
 
 # renovate: datasource=github-releases packageName=PowerShell/PowerShell
 RUN install-tool powershell v7.3.3
@@ -55,4 +55,4 @@ RUN install-tool java 11.0.18+10
 RUN install-apt zstd
 
 # renovate: datasource=github-releases packageName=minio/mc
-RUN install-tool minio-client RELEASE.2022-12-24T15-21-38Z
+RUN install-tool minio-client RELEASE.2023-03-23T20-03-04Z
