@@ -22,7 +22,7 @@ RUN install-tool powershell v7.3.3
 RUN install-tool node 18.15.0
 
 # renovate: datasource=npm
-RUN install-npm corepack 0.17.1
+RUN install-npm corepack 0.17.2
 RUN corepack -v && corepack enable && yarn -v
 
 # renovate: datasource=adoptium-java packageName=java-jre
