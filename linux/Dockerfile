@@ -32,7 +32,7 @@ RUN install-tool node 18.16.0
 RUN install-tool corepack 0.17.2
 
 # renovate: datasource=github-releases packageName=docker/compose
-RUN install-tool docker-compose v2.17.3
+RUN install-tool docker-compose v2.18.0
 
 # renovate: datasource=docker packageName=hashicorp/terraform versioning=docker
 #RUN install-tool terraform 0.14.7
