@@ -36,6 +36,12 @@
       "description": "Minio versioning",
       "matchPackageNames": ["minio-client"],
       "versioning": "regex:^(?<compatibility>RELEASE\\.)(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)T(?<build>\\d+)-\\d+-\\d+Z$"
+    },
+    {
+      "description": "disable lockfile maintenance for tests",
+      "matchPaths": ["**/test/**"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "enabled": false
     }
   ]
 }
