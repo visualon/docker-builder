@@ -20,10 +20,10 @@ RUN install-tool powershell v7.3.4
 RUN install-tool dotnet 3.1.426
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
-RUN install-tool dotnet 6.0.410
+RUN install-tool dotnet 6.0.411
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
-RUN install-tool dotnet 7.0.304
+RUN install-tool dotnet 7.0.305
 
 # renovate: datasource=node
 RUN install-tool node 18.16.1
