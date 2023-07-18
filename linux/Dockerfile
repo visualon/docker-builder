@@ -41,7 +41,7 @@ RUN install-tool docker-compose v2.20.0
 RUN install-tool kubectl v1.27.3
 
 # renovate: datasource=github-releases packageName=docker/buildx
-RUN install-tool buildx v0.11.1
+RUN install-tool buildx v0.11.2
 
 # renovate: datasource=github-releases packageName=kubernetes-sigs/kustomize
 RUN install-tool kustomize 4.5.7
