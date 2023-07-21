@@ -26,7 +26,7 @@ RUN install-tool dotnet 6.0.412
 RUN install-tool dotnet 7.0.306
 
 # renovate: datasource=node
-RUN install-tool node 18.16.1
+RUN install-tool node 18.17.0
 
 # renovate: datasource=npm
 RUN install-tool corepack 0.19.0
