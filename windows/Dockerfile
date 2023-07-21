@@ -26,7 +26,7 @@ RUN install-npm corepack 0.19.0
 RUN corepack -v && corepack enable && yarn -v
 
 # renovate: datasource=adoptium-java packageName=java-jre
-RUN install-tool java 11.0.19+7
+RUN install-tool java 11.0.20+8
 
 # renovate: datasource=github-releases packageName=facebook/zstd
 RUN install-tool zstd v1.5.5
