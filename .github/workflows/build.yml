@@ -27,20 +27,23 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+      - name: enable corepack
+        run: corepack enable
+
       - name: Set up Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
+          cache: pnpm
 
       - name: enable corepack
         run: corepack enable
 
       - name: Installing dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
 
   windows:
     runs-on: ${{ format('windows-{0}', matrix.os) }}
@@ -145,28 +148,31 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+      - name: enable corepack
+        run: corepack enable
+
       - name: Set up Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
+          cache: pnpm
 
       - name: enable corepack
         run: corepack enable
 
       - name: Installing dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Log into registry
         if: github.ref == 'refs/heads/main'
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Build the Docker multiarch manifest
-        run: yarn build --release latest
+        run: pnpm build --release latest
 
       - name: Publish the Docker multiarch manifest
         if: github.ref == 'refs/heads/main'
-        run: yarn push --release latest
+        run: pnpm push --release latest
 
   release:
     needs: [multi-arch]
@@ -182,23 +188,26 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+      - name: enable corepack
+        run: corepack enable
+
       - name: Set up Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
+          cache: pnpm
 
       - name: enable corepack
         run: corepack enable
 
       - name: Installing dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Log into registry
         if: github.ref == 'refs/heads/main'
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: semantic-release
-        run: yarn semantic-release --dry-run ${{env.DRY_RUN}} --ci ${{env.DRY_RUN != 'true'}}
+        run: pnpm semantic-release --dry-run ${{env.DRY_RUN}} --ci ${{env.DRY_RUN != 'true'}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
