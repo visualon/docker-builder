@@ -35,7 +35,7 @@ RUN install-tool docker-compose v2.24.0
 #RUN install-tool terraform 0.14.7
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
-RUN install-tool kubectl v1.29.0
+RUN install-tool kubectl v1.29.1
 
 # renovate: datasource=github-releases packageName=docker/buildx
 RUN install-tool buildx v0.12.1
