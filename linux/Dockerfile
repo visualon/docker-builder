@@ -29,7 +29,7 @@ RUN install-tool node 20.11.0
 RUN install-tool corepack 0.24.1
 
 # renovate: datasource=github-releases packageName=docker/compose
-RUN install-tool docker-compose v2.24.3
+RUN install-tool docker-compose v2.24.4
 
 # renovate: datasource=docker packageName=hashicorp/terraform versioning=docker
 #RUN install-tool terraform 0.14.7
