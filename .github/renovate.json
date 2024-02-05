@@ -9,26 +9,26 @@
   "platformAutomerge": true,
   "packageRules": [
     {
-      "packageNames": ["kubernetes-sigs/kustomize"],
+      "matchPackageNames": ["kubernetes-sigs/kustomize"],
       "extractVersion": "^kustomize\\/v(?<version>\\d+\\.\\d+\\.\\d+)$"
     },
     {
       "description": "Trigger fix release for deps updates",
-      "matchPaths": ["**/Dockerfile", "**/Dockerfile.*"],
+      "matchFileNames": ["**/Dockerfile", "**/Dockerfile.*"],
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "semanticCommitType": "fix",
       "additionalBranchPrefix": "deps-"
     },
     {
       "description": "Trigger feat release for deps major updates",
-      "matchPaths": ["**/Dockerfile", "**/Dockerfile.*"],
+      "matchFileNames": ["**/Dockerfile", "**/Dockerfile.*"],
       "matchUpdateTypes": ["major"],
       "semanticCommitType": "feat",
       "additionalBranchPrefix": "deps-"
     },
     {
       "description": "Use `test` semantic commit scope for tests",
-      "matchPaths": ["**/test/**"],
+      "matchFileNames": ["**/test/**"],
       "semanticCommitType": "test",
       "additionalBranchPrefix": "test-"
     },
@@ -39,7 +39,7 @@
     },
     {
       "description": "disable lockfile maintenance for tests",
-      "matchPaths": ["**/test/**"],
+      "matchFileNames": ["**/test/**"],
       "matchUpdateTypes": ["lockFileMaintenance"],
       "enabled": false
     }
