@@ -8,12 +8,12 @@ env:
   FILE: builder
   IMAGE: ghcr.io/${{ github.repository_owner }}/builder
   NODE_VERSION: 20.11.0 # renovate: datasource=node depName=node
-  DRY_RUN: ${{ github.ref != 'refs/heads/main' }}
+  DRY_RUN: ${{ github.ref_name != github.event.repository.default_branch }}
   BUILDKIT_PROGRESS: plain
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref_name != github.event.repository.default_branch }}
 
 permissions:
   contents: read
@@ -84,11 +84,11 @@ jobs:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
       - name: Log into registry
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Publish the Docker image
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: docker push ${{ env.IMAGE }}
         env:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
@@ -127,11 +127,11 @@ jobs:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
       - name: Log into registry
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Publish the Docker image
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: docker buildx bake build --provenance=false
 
   multi-arch:
@@ -164,14 +164,14 @@ jobs:
         run: pnpm install
 
       - name: Log into registry
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Build the Docker multiarch manifest
         run: pnpm build --release latest
 
       - name: Publish the Docker multiarch manifest
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: pnpm push --release latest
 
   release:
@@ -204,7 +204,7 @@ jobs:
         run: pnpm install
 
       - name: Log into registry
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == github.event.repository.default_branch
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: semantic-release
