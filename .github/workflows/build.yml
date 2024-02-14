@@ -7,7 +7,7 @@ env:
   OWNER: ${{ github.repository_owner }}
   FILE: builder
   IMAGE: ghcr.io/${{ github.repository_owner }}/builder
-  NODE_VERSION: 20.11.0 # renovate: datasource=node depName=node
+  NODE_VERSION: 20.11.1 # renovate: datasource=node depName=node
   DRY_RUN: ${{ github.ref_name != github.event.repository.default_branch }}
   BUILDKIT_PROGRESS: plain
 
