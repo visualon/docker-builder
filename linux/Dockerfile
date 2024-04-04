@@ -44,7 +44,7 @@ RUN install-tool kubectl v1.29.3
 RUN install-tool buildx v0.13.1
 
 # renovate: datasource=github-releases packageName=kubernetes-sigs/kustomize
-RUN install-tool kustomize 5.3.0
+RUN install-tool kustomize 5.4.0
 
 # renovate: datasource=github-releases packageName=visualon/skopeo-prebuild
 RUN install-tool skopeo 1.15.0
