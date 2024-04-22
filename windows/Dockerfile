@@ -22,7 +22,7 @@ RUN install-tool powershell v7.4.2
 RUN install-tool node 20.12.2
 
 # renovate: datasource=npm
-RUN install-npm corepack 0.26.0
+RUN install-npm corepack 0.27.0
 RUN corepack -v && corepack enable && yarn -v
 
 # renovate: datasource=java-version packageName=java-jre
