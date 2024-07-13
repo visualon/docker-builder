@@ -32,7 +32,7 @@ RUN install-tool java 17.0.11+9
 RUN install-tool zstd v1.5.6
 
 # renovate: datasource=github-releases packageName=minio/mc
-RUN install-tool minio-client RELEASE.2024-07-08T20-59-24Z
+RUN install-tool minio-client RELEASE.2024-07-11T18-01-28Z
 
 # install last to get latest vs updates
 ARG VS_DOTNET_VERSIONS="6.0;8.0"
