@@ -19,7 +19,7 @@ RUN git config --system safe.directory "*"
 RUN install-tool powershell v7.4.4
 
 # renovate: datasource=node
-RUN install-tool node 20.15.1
+RUN install-tool node 20.16.0
 
 # renovate: datasource=npm
 RUN install-npm corepack 0.29.3
