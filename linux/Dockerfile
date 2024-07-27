@@ -55,4 +55,4 @@ RUN install-tool java 17.0.12+7
 RUN install-apt zstd
 
 # renovate: datasource=github-releases packageName=minio/mc
-RUN install-tool minio-client RELEASE.2024-07-22T20-02-49Z
+RUN install-tool minio-client RELEASE.2024-07-26T13-08-44Z
