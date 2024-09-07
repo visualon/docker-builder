@@ -26,7 +26,7 @@ RUN install-tool dotnet 8.0.401
 RUN install-tool node 20.17.0
 
 # renovate: datasource=npm
-RUN install-tool corepack 0.29.3
+RUN install-tool corepack 0.29.4
 
 # renovate: datasource=github-releases packageName=docker/compose
 RUN install-tool docker-compose v2.29.2
