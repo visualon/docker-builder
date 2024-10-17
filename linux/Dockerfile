@@ -50,7 +50,7 @@ RUN install-tool kustomize 5.5.0
 RUN install-tool skopeo 1.16.1
 
 # renovate: datasource=java-version packageName=java-jre
-RUN install-tool java 21.0.4+7.0.LTS
+RUN install-tool java 21.0.5+11.0.LTS
 
 RUN install-apt zstd
 
