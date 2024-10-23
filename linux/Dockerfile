@@ -14,7 +14,7 @@ ENV DOTNET_CLI_UI_LANGUAGE=en-us
 RUN install-tool docker v27.3.1
 
 # renovate: datasource=github-releases packageName=PowerShell/PowerShell
-RUN install-tool powershell v7.4.5
+RUN install-tool powershell v7.4.6
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
 RUN install-tool dotnet 6.0.427
