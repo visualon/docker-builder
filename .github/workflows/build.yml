@@ -67,16 +67,17 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - run: df -h
-      - run: docker system df
-      - run: docker image ls
-
-      - run: |
-          set -ex
-          env
-          rm -rf $RUNNER_TOOL_CACHE
+      - name: df
+        run: |
           df -h
-        shell: bash
+          docker system df
+          docker image ls
+
+      - name: setup docker
+        run: |
+          stop-service docker
+          echo '{"data-root": "d:\\docker"}' > C:\ProgramData\docker\config\daemon.json
+          start-service docker
 
       # ignore not yet existing images
       - name: Fetch the Docker image
@@ -84,6 +85,12 @@ jobs:
           docker pull ${{ env.IMAGE }}
           docker pull ${{ env.IMAGE }}:${{ env.TAG }}
         continue-on-error: true
+
+      - name: df
+        run: |
+          df -h
+          docker system df
+          docker image ls
 
       - name: Build the Docker image
         run: docker build -t ${{ env.IMAGE }}:${{ env.TAG }} --cache-from ${{ env.IMAGE }} --cache-from ${{ env.IMAGE }}:${{ env.TAG }} -f Dockerfile .
@@ -95,7 +102,8 @@ jobs:
         env:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
-      - run: |
+      - name: df
+        run: |
           df -h
           docker system df
           docker image ls
