@@ -68,6 +68,13 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - run: df -h
+      - run: docker system df
+      - run: docker image ls
+
+      - run: |
+          rm -rf {{ env.RUNNER_TOOL_CACHE }}
+          df -h
+        shell: bash
 
       # ignore not yet existing images
       - name: Fetch the Docker image
@@ -86,7 +93,10 @@ jobs:
         env:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
 
-      - run: df -h
+      - run: |
+          df -h
+          docker system df
+          docker image ls
         if: always()
 
       - name: Log into registry
