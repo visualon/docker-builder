@@ -72,7 +72,9 @@ jobs:
       - run: docker image ls
 
       - run: |
-          rm -rf ${{ env.RUNNER_TOOL_CACHE }}
+          set -ex
+          env
+          rm -rf $RUNNER_TOOL_CACHE
           df -h
         shell: bash
 
