@@ -55,7 +55,10 @@ jobs:
 
     strategy:
       matrix:
-        os: [2019, 2022]
+        os:
+          - 2019
+          - 2022
+          - 2025
 
     env:
       BASE: ${{ matrix.os }}
@@ -63,6 +66,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - run: df -h
+      - run: docker system df
+      - run: docker image ls
+
+      - run: |
+          set -ex
+          env
+          rm -rf $RUNNER_TOOL_CACHE
+          df -h
+        shell: bash
 
       # ignore not yet existing images
       - name: Fetch the Docker image
@@ -80,6 +94,12 @@ jobs:
         working-directory: ./windows
         env:
           IMAGE: ${{ env.IMAGE }}:${{ env.TAG }}
+
+      - run: |
+          df -h
+          docker system df
+          docker image ls
+        if: always()
 
       - name: Log into registry
         if: github.ref_name == github.event.repository.default_branch
