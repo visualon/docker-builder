@@ -26,7 +26,7 @@ RUN install-tool dotnet 8.0.404
 RUN install-tool dotnet 9.0.101
 
 # renovate: datasource=node
-RUN install-tool node 22.12.0
+RUN install-tool node 22.13.0
 
 # renovate: datasource=npm
 RUN install-tool pnpm 9.15.3
