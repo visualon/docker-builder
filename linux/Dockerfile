@@ -1,3 +1,5 @@
+FROM ghcr.io/alerque/git-warp-time:v0.8.5 AS git-warp-time
+
 FROM ghcr.io/visualon/buildpack:8.1.39@sha256:663bd0c863863f3546699cae7ab8793bb6e81de475d93ca761b6944e584d064f
 
 LABEL \
@@ -59,3 +61,7 @@ RUN install-apt zstd
 
 # renovate: datasource=github-releases packageName=minio/mc
 RUN install-tool minio-client RELEASE.2024-07-26T13-08-44Z
+
+# https://github.com/alerque/git-warp-time
+COPY --from=git-warp-time /usr/local/bin/git-warp-time /usr/local/bin/git-warp-time
+RUN git-warp-time --version
