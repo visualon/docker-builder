@@ -13,7 +13,7 @@ RUN set -ex; install-apt locales; locale-gen en_US.UTF-8
 ENV DOTNET_CLI_UI_LANGUAGE=en-us
 
 # renovate: datasource=github-releases packageName=moby/moby
-RUN install-tool docker v27.5.1
+RUN install-tool docker v28.0.4
 
 # renovate: datasource=github-releases packageName=PowerShell/PowerShell
 RUN install-tool powershell v7.5.0
