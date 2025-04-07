@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@swc/core-win32-x64-msvc": "1.11.16"
+    "@swc/core-win32-x64-msvc": "1.11.18"
   }
 }
