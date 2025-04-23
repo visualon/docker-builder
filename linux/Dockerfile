@@ -40,7 +40,7 @@ RUN install-tool docker-compose v2.35.1
 RUN install-tool flux v2.5.1
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
-RUN install-tool kubectl v1.32.3
+RUN install-tool kubectl v1.32.4
 
 # renovate: datasource=github-releases packageName=docker/buildx
 RUN install-tool buildx v0.23.0
