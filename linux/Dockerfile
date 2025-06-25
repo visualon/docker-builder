@@ -28,7 +28,7 @@ RUN install-tool dotnet 9.0.301
 RUN install-tool node 22.16.0
 
 # renovate: datasource=npm
-RUN install-tool pnpm 10.12.2
+RUN install-tool pnpm 10.12.3
 
 # renovate: datasource=github-releases packageName=docker/compose
 RUN install-tool docker-compose v2.37.3
