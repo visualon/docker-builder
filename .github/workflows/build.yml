@@ -3,6 +3,8 @@ name: build
 on:
   push:
 
+  merge_group:
+
 env:
   OWNER: ${{ github.repository_owner }}
   FILE: builder
