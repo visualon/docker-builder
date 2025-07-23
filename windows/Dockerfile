@@ -25,7 +25,7 @@ RUN install-tool node 22.17.1
 RUN install-npm pnpm 10.13.1
 
 # renovate: datasource=java-version packageName=java-jre
-RUN install-tool java 21.0.7+6.0.LTS
+RUN install-tool java 21.0.8+9.0.LTS
 
 # renovate: datasource=github-releases packageName=facebook/zstd
 RUN install-tool zstd v1.5.7
