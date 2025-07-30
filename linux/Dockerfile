@@ -62,3 +62,24 @@ RUN install-tool minio-client RELEASE.2024-07-26T13-08-44Z
 # https://github.com/alerque/git-warp-time
 COPY --from=git-warp-time /usr/local/bin/git-warp-time /usr/local/bin/git-warp-time
 RUN git-warp-time --version
+
+# required for docfx pdf (uses playwright chrome)
+RUN install-apt \
+  libasound2t64 \
+  libatk1.0-0t64 \
+  libatk-bridge2.0-0t64 \
+  libatspi2.0-0t64 \
+  libdbus-1-3 \
+  libgbm1 \
+  libglib2.0-0t64 \
+  libnspr4 \
+  libnss3 \
+  libx11-6 \
+  libxcb1 \
+  libxcomposite1 \
+  libxdamage1 \
+  libxext6 \
+  libxfixes3 \
+  libxkbcommon0 \
+  libxrandr2 \
+  ;
