@@ -49,7 +49,7 @@ RUN install-tool buildx v0.26.1
 RUN install-tool kustomize 5.7.1
 
 # renovate: datasource=github-releases packageName=visualon/skopeo-prebuild
-RUN install-tool skopeo 1.19.0
+RUN install-tool skopeo 1.20.0
 
 # renovate: datasource=java-version packageName=java-jre
 RUN install-tool java 21.0.8+9.0.LTS
