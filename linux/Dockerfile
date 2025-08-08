@@ -34,7 +34,7 @@ RUN install-tool pnpm 10.14.0
 RUN install-tool docker-compose v2.39.1
 
 # renovate: datasource=docker packageName=hashicorp/terraform versioning=docker
-#RUN install-tool terraform 0.14.7
+RUN install-tool terraform 1.12.2
 
 # renovate: datasource=github-releases packageName=fluxcd/flux2
 RUN install-tool flux v2.6.4
