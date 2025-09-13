@@ -1,6 +1,6 @@
 FROM ghcr.io/alerque/git-warp-time:v0.8.5@sha256:d9fc9ae6ed418c1f348cd6e6adc15b11ca86c24251f5605f96c67e708e40a4a3 AS git-warp-time
 
-FROM ghcr.io/visualon/buildpack:9.0.70@sha256:80aa3aa274a7bf7fdff242541e4e3c696f5b42e11005a8e9ba8f53699568bf2c
+FROM ghcr.io/visualon/buildpack:9.0.71@sha256:26b76a960b56233d80240afd268084728c8844603502fb9d887104bea5f6eae6
 
 LABEL \
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" \
