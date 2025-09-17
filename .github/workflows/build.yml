@@ -76,11 +76,11 @@ jobs:
           docker system df
           docker image ls
 
-      # - name: setup docker
-      #   run: |
-      #     stop-service docker
-      #     echo '{"data-root": "d:\\docker"}' > C:\ProgramData\docker\config\daemon.json
-      #     start-service docker
+      - name: setup docker
+        run: |
+          stop-service docker
+          echo '{"data-root": "d:\\docker"}' > C:\ProgramData\docker\config\daemon.json
+          start-service docker
 
       # ignore not yet existing images
       - name: Fetch the Docker image
