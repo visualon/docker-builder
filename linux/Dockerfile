@@ -31,7 +31,7 @@ RUN install-tool node 22.21.1
 RUN install-tool pnpm 10.19.0
 
 # renovate: datasource=github-releases packageName=docker/compose
-RUN install-tool docker-compose v2.40.2
+RUN install-tool docker-compose v2.40.3
 
 # renovate: datasource=github-releases packageName=hashicorp/terraform
 RUN install-tool terraform v1.13.4
