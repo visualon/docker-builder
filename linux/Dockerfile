@@ -40,7 +40,7 @@ RUN install-tool terraform v1.13.5
 RUN install-tool flux v2.7.3
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
-RUN install-tool kubectl v1.34.1
+RUN install-tool kubectl v1.34.2
 
 # renovate: datasource=github-releases packageName=docker/buildx
 RUN install-tool buildx v0.29.1
