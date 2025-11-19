@@ -24,6 +24,9 @@ RUN install-tool dotnet 8.0.416
 # renovate: datasource=dotnet packageName=dotnet-sdk
 RUN install-tool dotnet 9.0.307
 
+# renovate: datasource=dotnet packageName=dotnet-sdk
+RUN install-tool dotnet 10.0.100
+
 # renovate: datasource=node
 RUN install-tool node 24.11.1
 

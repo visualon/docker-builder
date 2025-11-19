@@ -34,5 +34,5 @@ RUN install-tool zstd v1.5.7
 RUN install-tool minio-client RELEASE.2024-07-26T13-08-44Z
 
 # install last to get latest vs updates
-ARG VS_DOTNET_VERSIONS="8.0;9.0"
+ARG VS_DOTNET_VERSIONS="8.0;9.0;10.0"
 RUN install-tool vs-tools
