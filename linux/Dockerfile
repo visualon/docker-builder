@@ -40,7 +40,7 @@ RUN install-tool docker-compose v2.40.3
 RUN install-tool terraform v1.14.0
 
 # renovate: datasource=github-releases packageName=fluxcd/flux2
-RUN install-tool flux v2.7.3
+RUN install-tool flux v2.7.5
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
 RUN install-tool kubectl v1.34.2
