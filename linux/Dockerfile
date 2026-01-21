@@ -22,7 +22,7 @@ RUN install-tool powershell v7.5.4
 RUN install-tool dotnet 8.0.417
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
-RUN install-tool dotnet 9.0.309
+RUN install-tool dotnet 9.0.310
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
 RUN install-tool dotnet 10.0.102
