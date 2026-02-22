@@ -58,7 +58,7 @@ RUN install-tool kustomize 5.8.1
 RUN install-tool skopeo 1.22.0
 
 # renovate: datasource=github-releases packageName=getsops/sops
-RUN install-tool sops v3.11.0
+RUN install-tool sops v3.12.1
 
 # renovate: datasource=java-version packageName=java-jre?os=linux&architecture=x64
 RUN install-tool java 21.0.10+7.0.LTS
