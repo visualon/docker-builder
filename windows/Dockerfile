@@ -1,7 +1,7 @@
 # escape=`
 
 # Use the latest buildpack.
-FROM ghcr.io/visualon/buildpack:11.1.13@sha256:21fb840448f5aa86341cad7ff3cba1c587ece720e2afbdf78244a8f935f9fefd
+FROM ghcr.io/visualon/buildpack:11.1.16@sha256:302486d7ef70a4399cbfb54de6f58e23f0119297e3218a617501784e8e5b47df
 
 LABEL `
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" `
@@ -19,10 +19,10 @@ RUN git config --system safe.directory "*"
 RUN install-tool powershell v7.5.4
 
 # renovate: datasource=node
-RUN install-tool node 24.13.1
+RUN install-tool node 24.14.0
 
 # renovate: datasource=npm
-RUN install-npm pnpm 10.30.1
+RUN install-npm pnpm 10.30.3
 
 # renovate: datasource=java-version packageName=java-jre?os=windows&architecture=x64
 RUN install-tool java 21.0.10+7.0.LTS
