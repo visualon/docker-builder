@@ -1,4 +1,4 @@
-FROM ghcr.io/alerque/git-warp-time:v0.8.5@sha256:d9fc9ae6ed418c1f348cd6e6adc15b11ca86c24251f5605f96c67e708e40a4a3 AS git-warp-time
+FROM ghcr.io/alerque/git-warp-time:v1.0.0@sha256:4e533607444a5d6cf7a313d255309728b166a34a17d570391fc68c82acc6fd1c AS git-warp-time
 
 FROM ghcr.io/visualon/buildpack:11.1.30@sha256:42bafe6543da346241de9b0bed9078533370f557932c871843d30491cde9bd4b
 
