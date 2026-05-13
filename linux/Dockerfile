@@ -19,10 +19,10 @@ RUN install-tool docker v28.5.2
 RUN install-tool powershell v7.6.1
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
-RUN install-tool dotnet 8.0.420
+RUN install-tool dotnet 8.0.421
 
 # renovate: datasource=dotnet packageName=dotnet-sdk
-RUN install-tool dotnet 10.0.203
+RUN install-tool dotnet 10.0.300
 
 # renovate: datasource=node
 RUN install-tool node 24.15.0
