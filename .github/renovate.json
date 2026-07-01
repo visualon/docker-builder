@@ -16,14 +16,14 @@
     {
       "description": "Trigger fix release for deps updates",
       "matchFileNames": ["**/Dockerfile", "**/Dockerfile.*"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "matchUpdateTypes": ["patch", "digest"],
       "semanticCommitType": "fix",
       "additionalBranchPrefix": "deps-"
     },
     {
-      "description": "Trigger feat release for deps major updates",
+      "description": "Trigger feat release for deps major and minor updates",
       "matchFileNames": ["**/Dockerfile", "**/Dockerfile.*"],
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": ["major", "minor", ],
       "semanticCommitType": "feat",
       "additionalBranchPrefix": "deps-"
     },
