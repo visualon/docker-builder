@@ -11,12 +11,12 @@ env:
   OWNER: ${{ github.repository_owner }}
   FILE: builder
   IMAGE: ghcr.io/${{ github.repository_owner }}/builder
-  DRY_RUN: ${{ github.ref_name != github.event.repository.default_branch }}
+  DRY_RUN: ${{ github.ref_name != github.event.repository.default_branch && !startsWith(github.ref_name, 'maint/') }}
   BUILDKIT_PROGRESS: plain
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: ${{ github.ref_name != github.event.repository.default_branch }}
+  cancel-in-progress: ${{ github.ref_name != github.event.repository.default_branch && !startsWith(github.ref_name, 'maint/') }}
 
 permissions:
   contents: read
