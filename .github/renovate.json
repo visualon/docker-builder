@@ -23,7 +23,7 @@
     {
       "description": "Trigger feat release for deps major and minor updates",
       "matchFileNames": ["**/Dockerfile", "**/Dockerfile.*"],
-      "matchUpdateTypes": ["major", "minor", ],
+      "matchUpdateTypes": ["major", "minor"],
       "semanticCommitType": "feat",
       "additionalBranchPrefix": "deps-"
     },
