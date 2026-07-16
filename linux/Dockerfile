@@ -40,7 +40,7 @@ RUN install-tool terraform v1.15.8
 RUN install-tool tofu 1.12.3
 
 # renovate: datasource=github-releases packageName=fluxcd/flux2
-RUN install-tool flux v2.9.1
+RUN install-tool flux v2.9.2
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
 RUN install-tool kubectl v1.36.2
