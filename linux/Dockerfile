@@ -58,7 +58,7 @@ RUN install-tool skopeo 1.23.0
 RUN install-tool sops v3.13.2
 
 # renovate: datasource=java-version packageName=java-jre?os=linux&architecture=x64
-RUN install-tool java 21.0.11+10.0.LTS
+RUN install-tool java 21.0.12+8.0.LTS
 
 RUN install-apt zstd
 
