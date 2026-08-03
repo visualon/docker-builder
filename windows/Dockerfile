@@ -19,7 +19,7 @@ RUN git config --system safe.directory "*"
 RUN install-tool powershell v7.6.4
 
 # renovate: datasource=node
-RUN install-tool node 24.18.0
+RUN install-tool node 24.19.0
 
 # renovate: datasource=npm
 RUN install-npm pnpm 11.18.0
