@@ -22,7 +22,7 @@ RUN install-tool powershell v7.6.6
 RUN install-tool node 24.21.0
 
 # renovate: datasource=npm
-RUN install-npm pnpm 11.28.0
+RUN install-npm pnpm 11.28.2
 
 # renovate: datasource=java-version packageName=java-jre?os=windows&architecture=x64
 RUN install-tool java 21.0.12+8.0.LTS
