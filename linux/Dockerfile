@@ -46,7 +46,7 @@ RUN install-tool flux v2.9.5
 RUN install-tool kubectl v1.37.1
 
 # renovate: datasource=github-releases packageName=docker/buildx
-RUN install-tool buildx v0.37.1
+RUN install-tool buildx v0.37.2
 
 # renovate: datasource=github-releases packageName=kubernetes-sigs/kustomize
 RUN install-tool kustomize 5.8.2
