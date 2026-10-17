@@ -34,7 +34,7 @@ RUN install-tool pnpm 11.28.5
 RUN install-tool docker-compose v5.6.0
 
 # renovate: datasource=github-releases packageName=hashicorp/terraform
-RUN install-tool terraform v1.16.5
+RUN install-tool terraform v1.16.6
 
 # renovate: datasource=github-releases packageName=opentofu/opentofu
 RUN install-tool tofu 1.13.1
