@@ -37,7 +37,7 @@ RUN install-tool docker-compose v5.6.1
 RUN install-tool terraform v1.16.6
 
 # renovate: datasource=github-releases packageName=opentofu/opentofu
-RUN install-tool tofu 1.13.1
+RUN install-tool tofu 1.13.2
 
 # renovate: datasource=github-releases packageName=fluxcd/flux2
 RUN install-tool flux v2.9.6
