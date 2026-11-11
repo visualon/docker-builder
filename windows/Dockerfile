@@ -1,7 +1,7 @@
 # escape=`
 
 # Use the latest buildpack.
-FROM ghcr.io/visualon/buildpack:11.2.114@sha256:55ab519151b9e3f7ca1ea6a7ee60e6316d76def89d1f7c075aafc81887ef1ae2
+FROM ghcr.io/visualon/buildpack:11.2.116@sha256:47172788d585e241cd8683e163704e8af4f2e191372c3a15519c6b66effe3bfc
 
 LABEL `
   org.opencontainers.image.source="https://github.com/visualon/docker-builder" `
