@@ -52,7 +52,7 @@ RUN install-tool buildx v0.39.0
 RUN install-tool kustomize 5.8.3
 
 # renovate: datasource=github-releases packageName=visualon/skopeo-prebuild
-RUN install-tool skopeo 1.25.1
+RUN install-tool skopeo 1.25.2
 
 # renovate: datasource=github-releases packageName=getsops/sops
 RUN install-tool sops v3.13.3
