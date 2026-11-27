@@ -28,7 +28,7 @@ RUN install-npm pnpm 11.28.13
 RUN install-tool java 21.0.13+100000002.0.LTS
 
 # renovate: datasource=github-releases packageName=facebook/zstd
-RUN install-tool zstd v1.5.7
+RUN install-tool zstd v1.6.0
 
 # renovate: datasource=github-releases packageName=minio/mc
 RUN install-tool minio-client RELEASE.2024-07-26T13-08-44Z
