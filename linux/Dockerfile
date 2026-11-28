@@ -43,7 +43,7 @@ RUN install-tool tofu 1.13.10
 RUN install-tool flux v2.10.1
 
 # renovate: datasource=github-releases packageName=kubernetes/kubernetes
-RUN install-tool kubectl v1.37.2
+RUN install-tool kubectl v1.37.3
 
 # renovate: datasource=github-releases packageName=docker/buildx
 RUN install-tool buildx v0.39.1
